@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Feliz Cumpleaños, Sarah!</title>
+    <style>
+        /* Estilos básicos */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f8a5d4;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            color: #ffffff;
+        }
+
+        /* Estilos para el título */
+        h1 {
+            font-size: 3em;
+            text-align: center;
+            animation: colorChange 2s infinite alternate;
+            margin-top: 20px;
+        }
+
+        /* Animación de cambio de color en el texto */
+        @keyframes colorChange {
+            from { color: #ffffff; }
+            to { color: #ff1744; }
+        }
+
+        /* Contenedor de efectos (flores, corazones, globos) */
+        .effects {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 100px;
+            overflow: hidden;
+            opacity: 0;
+            animation: fadeIn 3s ease-in-out forwards;
+            animation-delay: 1s;
+        }
+
+        /* Animación para que los efectos caigan */
+        .effects img {
+            width: 300px;
+            height: 400px;
+            animation: fall 2s infinite;
+            animation-timing-function: ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(-100px); opacity: 1; }
+            100% { transform: translateY(800px); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Feliz cumpleaños de tu único mozo Sarah Vaneeesaaa  </h1>
+    <div class="effects">
+        <img src="flor.png" alt="Flor">
+        <img src="corazon.png" alt="Corazón">
+        <img src="globo.png" alt="Globo">
+        <img src="flor.png" alt="Flor">
+        <img src="corazon.png" alt="Corazón">
+        <img src="globo.png" alt="Globo">
+    </div>
+
+    <!-- Audio de cumpleaños -->
+    <audio id="birthdaySong" autoplay loop>
+        <source src="C:\Users\aleja\OneDrive\Documentos\cumpleaños sarah\Que Dios Te Bendiga, Peter Manjarrés Y Sergio Luis Rodríguez - Video Letra.mp3" type="audio/mpeg">
+        Tu navegador no soporta la reproducción de audio.
+    </audio>
+
+    <script>
+        // Reproduce la canción automáticamente al cargar la página
+        window.onload = function() {
+            document.getElementById('birthdaySong').play();
+        };
+    </script>
+</body>
+</html>
